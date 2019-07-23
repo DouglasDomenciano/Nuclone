@@ -1,14 +1,17 @@
 import React from 'react'
-import logo from '~/assets/Nubank_Logo.png'
-import QRCode from "react-native-qrcode";
-import { Container, Code } from './style'
+
+import QRCode from 'react-native-qrcode';
+
+import { Container } from './style'
 
 export default function Menu() {
   return (
     <Container>
-      <Code>
-        <QRCode source={logo} />
-      </Code>
+      <QRCode
+          value="https://google.com"
+          size={200}
+          bgColor='purple'
+          fgColor='white'/>
     </Container>
   )
 }
